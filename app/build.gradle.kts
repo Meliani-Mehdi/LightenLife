@@ -36,7 +36,6 @@ android {
 }
 
 dependencies {
-
     implementation(libs.chip.navigation.bar)
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
