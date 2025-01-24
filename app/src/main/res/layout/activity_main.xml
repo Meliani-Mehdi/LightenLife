@@ -51,33 +51,38 @@
             android:id="@+id/username_edit_text"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="20dp"
+            android:background="@drawable/loginedittextborder"
             android:hint="Username"
             android:inputType="text"
-            android:background="@drawable/loginedittextborder"
-            app:layout_constraintTop_toBottomOf="@id/patient_text"
-            app:layout_constraintStart_toStartOf="parent"
+            android:paddingHorizontal="16dp"
+            android:paddingVertical="13dp"
+            android:textColor="@color/light_blue"
+            android:textColorHint="@color/light_gray"
             app:layout_constraintEnd_toEndOf="parent"
-            android:layout_marginTop="20dp"
-            android:layout_marginStart="20dp"
-            android:layout_marginEnd="20dp"
-            android:padding="13dp"
-            />
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/patient_text" />
 
         <!-- Password EditText -->
         <EditText
             android:id="@+id/password_edit_text"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="20dp"
+            android:background="@drawable/loginedittextborder"
             android:hint="Password"
             android:inputType="textPassword"
-            android:background="@drawable/loginedittextborder"
-            app:layout_constraintTop_toBottomOf="@id/username_edit_text"
-            app:layout_constraintStart_toStartOf="parent"
+            android:paddingHorizontal="16dp"
+            android:paddingVertical="13dp"
+            android:textColor="@color/light_blue"
+            android:textColorHint="@color/light_gray"
             app:layout_constraintEnd_toEndOf="parent"
-            android:layout_marginTop="10dp"
-            android:layout_marginStart="20dp"
-            android:layout_marginEnd="20dp"
-            android:padding="13dp"/>
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/username_edit_text" />
 
         <!-- Login Button -->
 

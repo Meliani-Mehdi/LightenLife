@@ -5,7 +5,7 @@ plugins {
 
 android {
     namespace = "com.app.lightenlife"
-    compileSdk = 34
+    compileSdk = 35
 
     defaultConfig {
         applicationId = "com.app.lightenlife"
@@ -37,6 +37,7 @@ android {
 
 dependencies {
 
+    implementation(libs.chip.navigation.bar)
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
     implementation(libs.material)
