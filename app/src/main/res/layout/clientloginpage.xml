@@ -124,7 +124,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
             android:text="or"
-            android:textColor="#DEDEDE"
+            android:textColor="@color/gray"
             android:textSize="16sp"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="@+id/sign_with_facebook_button"
