@@ -14,6 +14,7 @@
         android:layout_marginTop="15dp"
         android:layout_marginEnd="15dp"
         android:layout_marginBottom="15dp"
+        android:background="@color/beige"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -50,33 +51,32 @@
             android:id="@+id/username_edit_text"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="20dp"
+            android:background="@drawable/doctorloginedittextborder"
             android:hint="Username"
             android:inputType="text"
-            android:background="@drawable/doctorloginedittextborder"
-            app:layout_constraintTop_toBottomOf="@id/patient_text"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            android:layout_marginTop="20dp"
-            android:layout_marginStart="20dp"
-            android:layout_marginEnd="20dp"
             android:padding="13dp"
-            />
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/patient_text" />
 
         <!-- Password EditText -->
         <EditText
             android:id="@+id/password_edit_text"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="20dp"
+            android:background="@drawable/doctorloginedittextborder"
             android:hint="Password"
             android:inputType="textPassword"
-            android:background="@drawable/doctorloginedittextborder"
-            app:layout_constraintTop_toBottomOf="@id/username_edit_text"
-            app:layout_constraintStart_toStartOf="parent"
+            android:padding="13dp"
             app:layout_constraintEnd_toEndOf="parent"
-            android:layout_marginTop="10dp"
-            android:layout_marginStart="20dp"
-            android:layout_marginEnd="20dp"
-            android:padding="13dp"/>
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/username_edit_text" />
 
         <!-- Login Button -->
 
@@ -103,14 +103,14 @@
             android:id="@+id/forgot_password_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
             android:text="Forgot Password?"
             android:textColor="#36e1b2"
             android:textSize="16sp"
             android:textStyle="bold"
-            app:layout_constraintTop_toBottomOf="@id/login_button"
-            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            android:layout_marginTop="10dp" />
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/login_button" />
 
         <!-- Or Text -->
 
@@ -135,7 +135,7 @@
 
         <TextView
             android:id="@+id/sign_with_facebook_button"
-            android:layout_width="0dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="20dp"
             android:layout_marginTop="20dp"
@@ -148,7 +148,6 @@
             android:textSize="16sp"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/or_text" />
 

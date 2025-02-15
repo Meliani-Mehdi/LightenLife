@@ -23,7 +23,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="sans-serif-black"
-        android:text="AppName"
+        android:text="LightenLife"
         android:textAlignment="center"
         android:textColor="@color/light_blue"
         android:textSize="34sp"
