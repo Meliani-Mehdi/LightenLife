@@ -56,7 +56,7 @@
             android:layout_marginEnd="20dp"
             android:background="@drawable/loginedittextborder"
             android:hint="Username"
-            android:inputType="text"
+            android:inputType="text|textEmailAddress"
             android:padding="13dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -90,12 +90,12 @@
             android:layout_marginTop="10dp"
             android:layout_marginEnd="20dp"
             android:background="@drawable/loginbutton"
+            android:onClick="signInC"
             android:padding="10dp"
             android:text="Login"
             android:textColor="#FFFFFF"
             android:textSize="20sp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/password_edit_text" />
 
@@ -127,8 +127,7 @@
             android:textColor="@color/gray"
             android:textSize="16sp"
             android:textStyle="bold"
-            app:layout_constraintEnd_toEndOf="@+id/sign_with_facebook_button"
-            app:layout_constraintHorizontal_bias="0.494"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/forgot_password_text" />
 
@@ -156,15 +155,14 @@
             android:id="@+id/register_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="15dp"
-            android:text="New to Doctor Find App? Register."
-            android:textColor="@color/black"
+            android:layout_marginBottom="16dp"
+            android:text="New to Lighten Life? Register."
+            android:textColor="@color/light_blue"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.501"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/sign_with_facebook_button"
-            app:layout_constraintVertical_bias="0.907" />
+            app:layout_constraintVertical_bias="0.9" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
