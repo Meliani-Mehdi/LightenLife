@@ -5,6 +5,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/beige"
     tools:context=".Nav_activity">
 
     <androidx.fragment.app.FragmentContainerView
@@ -23,7 +24,8 @@
         android:layout_height="60dp"
         android:layout_gravity="bottom"
         android:layout_weight="1"
-        android:background="@color/white"
+        android:background="@drawable/bg_white_rounded"
+        android:backgroundTint="@color/white"
         app:cnb_menuResource="@menu/nav_menu"
         app:cnb_unselectedColor="@color/light_blue"
         app:layout_constraintBottom_toBottomOf="parent"

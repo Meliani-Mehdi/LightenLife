@@ -32,7 +32,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun goSignUpC(v: View){
-        startActivity(Intent(this, Nav_activity::class.java))
+        startActivity(Intent(this, clientSignUp_Activity::class.java))
         finish()
     }
 

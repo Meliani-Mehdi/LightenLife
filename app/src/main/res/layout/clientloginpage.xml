@@ -23,19 +23,19 @@
 
         <ImageView
             android:id="@+id/heart_rate_icon"
-            android:layout_width="90dp"
+            android:layout_width="340dp"
             android:layout_height="60dp"
             android:layout_marginTop="184dp"
             android:contentDescription="Heart Rate Icon"
+            android:paddingRight="245dp"
             android:src="@drawable/hearttt"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.106"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
             android:id="@+id/patient_text"
-            android:layout_width="wrap_content"
+            android:layout_width="340dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
             android:text="PATIENT"
@@ -43,21 +43,23 @@
             android:textSize="24sp"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.11"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/heart_rate_icon" />
+            app:layout_constraintTop_toBottomOf="@+id/heart_rate_icon" />
 
         <EditText
             android:id="@+id/username_edit_text"
-            android:layout_width="0dp"
+            android:layout_width="340dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="20dp"
             android:layout_marginTop="20dp"
             android:layout_marginEnd="20dp"
             android:background="@drawable/loginedittextborder"
-            android:hint="Username"
+            android:hint="E-mail"
             android:inputType="text|textEmailAddress"
             android:padding="13dp"
+            android:textColor="@color/black"
+            android:textColorHighlight="@color/black"
+            android:textColorHint="@color/gray"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/patient_text" />
@@ -65,7 +67,7 @@
         <!-- Password EditText -->
         <EditText
             android:id="@+id/password_edit_text"
-            android:layout_width="0dp"
+            android:layout_width="340dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="20dp"
             android:layout_marginTop="10dp"
@@ -74,6 +76,9 @@
             android:hint="Password"
             android:inputType="textPassword"
             android:padding="13dp"
+            android:textColor="@color/black"
+            android:textColorHighlight="@color/black"
+            android:textColorHint="@color/gray"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/username_edit_text" />
@@ -84,7 +89,7 @@
 
         <Button
             android:id="@+id/login_button"
-            android:layout_width="0dp"
+            android:layout_width="340dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="20dp"
             android:layout_marginTop="10dp"
@@ -105,7 +110,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
             android:text="Forgot Password?"
-            android:textColor="#5DADE2"
+            android:textColor="@color/light_blue"
             android:textSize="16sp"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
@@ -134,7 +139,7 @@
 
         <TextView
             android:id="@+id/sign_with_facebook_button"
-            android:layout_width="0dp"
+            android:layout_width="340dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="20dp"
             android:layout_marginTop="20dp"
@@ -147,7 +152,6 @@
             android:textSize="16sp"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/or_text" />
 
@@ -156,6 +160,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginBottom="16dp"
+            android:onClick="goSignUpC"
             android:text="New to Lighten Life? Register."
             android:textColor="@color/light_blue"
             app:layout_constraintBottom_toBottomOf="parent"
