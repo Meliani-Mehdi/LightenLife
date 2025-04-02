@@ -1,4 +1,7 @@
 package com.app.lightenlife
 
-class Tests {
-}
+data class Tests (
+    val questions : String,
+    val options : ArrayList<String>,
+    var answers : Int,
+)
