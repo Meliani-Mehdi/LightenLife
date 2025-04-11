@@ -22,11 +22,11 @@
 
 
         <ImageView
-            android:id="@+id/heart_rate_icon"
+            android:id="@+id/seth_icon"
             android:layout_width="90dp"
             android:layout_height="60dp"
             android:layout_marginTop="184dp"
-            android:contentDescription="Heart Rate Icon"
+            android:contentDescription="setho Icon"
             android:src="@drawable/sethoscope"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.106"
@@ -45,7 +45,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.11"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/heart_rate_icon" />
+            app:layout_constraintTop_toBottomOf="@id/seth_icon" />
 
         <EditText
             android:id="@+id/username_edit_text"

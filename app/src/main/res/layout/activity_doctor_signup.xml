@@ -5,8 +5,8 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#36facd"
-    tools:context=".doctorSignupActivity">
+    android:background="@color/green"
+    tools:context=".doctorSignup_activity">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -38,6 +38,7 @@
                 android:layout_marginTop="48dp"
                 android:layout_marginEnd="32dp"
                 android:background="@drawable/edittextborderdoctor"
+                android:backgroundTint="@color/green"
                 android:ems="10"
                 android:hint="Username"
                 android:inputType="text"
@@ -56,6 +57,7 @@
                 android:layout_marginTop="32dp"
                 android:layout_marginEnd="32dp"
                 android:background="@drawable/edittextborderdoctor"
+                android:backgroundTint="@color/green"
                 android:ems="10"
                 android:hint="Name"
                 android:inputType="text"
@@ -74,6 +76,7 @@
                 android:layout_marginTop="32dp"
                 android:layout_marginEnd="32dp"
                 android:background="@drawable/edittextborderdoctor"
+                android:backgroundTint="@color/green"
                 android:ems="10"
                 android:hint="E-mail"
                 android:inputType="textEmailAddress"
@@ -93,6 +96,7 @@
                 android:layout_marginTop="32dp"
                 android:layout_marginEnd="32dp"
                 android:background="@drawable/edittextborderdoctor"
+                android:backgroundTint="@color/green"
                 android:ems="10"
                 android:hint="Password"
                 android:inputType="textPassword"
@@ -112,6 +116,7 @@
                 android:layout_marginTop="32dp"
                 android:layout_marginEnd="32dp"
                 android:background="@drawable/edittextborderdoctor"
+                android:backgroundTint="@color/green"
                 android:ems="10"
                 android:hint="Confirm Password"
                 android:inputType="textPassword"
@@ -123,7 +128,7 @@
                 app:layout_constraintTop_toBottomOf="@+id/signup_Password" />
 
 
-           <!-- <Button
+            <!-- <Button
                 android:id="@+id/upload_pdf_button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -151,7 +156,7 @@
                 android:layout_marginStart="32dp"
                 android:layout_marginTop="32dp"
                 android:layout_marginEnd="32dp"
-                android:background="@drawable/signupdoctorbutton"
+                android:background="@color/green"
                 android:onClick="signUpDoctor"
                 android:text="Sign Up"
                 android:textColor="#FFFFFF"
@@ -169,7 +174,7 @@
                 android:clickable="true"
                 android:onClick="goSignInDoctor"
                 android:text="I have an account"
-                android:textColor="#34daad "
+                android:textColor="@color/green"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
