@@ -13,7 +13,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 
-class doctorSignupActivity : AppCompatActivity() {
+class doctorSignup_activity : AppCompatActivity() {
     private var pdfUri: Uri? = null
 
     private var authManager: AuthenticationManager? = null
@@ -128,6 +128,4 @@ class doctorSignupActivity : AppCompatActivity() {
         }*/
     }
 
- /*   companion object {
-        private const val PICK_PDF_REQUEST = 1
-    }*/
+

@@ -41,11 +41,19 @@ class TestFragment : Fragment() {
         val cardTest1 = view.findViewById<CardView>(R.id.card_test1)
         val cardTest2 = view.findViewById<CardView>(R.id.card_test2)
         val cardTest3 = view.findViewById<CardView>(R.id.card_test3)
+        val cardTest4 = view.findViewById<CardView>(R.id.card_test4)
+        val cardTest5 = view.findViewById<CardView>(R.id.card_test5)
+        val cardTest6 = view.findViewById<CardView>(R.id.card_test6)
+        val cardTest7 = view.findViewById<CardView>(R.id.card_test7)
 
         // Find start buttons (if using the improved layout)
         val btnStartTest1 = view.findViewById<Button?>(R.id.btn_start_test1)
         val btnStartTest2 = view.findViewById<Button?>(R.id.btn_start_test2)
         val btnStartTest3 = view.findViewById<Button?>(R.id.btn_start_test3)
+        val btnStartTest4 = view.findViewById<Button?>(R.id.btn_start_test4)
+        val btnStartTest5 = view.findViewById<Button?>(R.id.btn_start_test5)
+        val btnStartTest6 = view.findViewById<Button?>(R.id.btn_start_test6)
+        val btnStartTest7 = view.findViewById<Button?>(R.id.btn_start_test7)
 
         // Set click listeners for cards
         cardTest1.setOnClickListener {
@@ -59,6 +67,18 @@ class TestFragment : Fragment() {
         cardTest3.setOnClickListener {
             navigateToQuestions(3)
         }
+        cardTest4.setOnClickListener {
+            navigateToQuestions(4)
+        }
+        cardTest5.setOnClickListener {
+            navigateToQuestions(5)
+        }
+        cardTest6.setOnClickListener {
+            navigateToQuestions(6)
+        }
+        cardTest7.setOnClickListener {
+            navigateToQuestions(7)
+        }
 
         // Set click listeners for buttons if they exist
         btnStartTest1?.setOnClickListener {
@@ -71,6 +91,18 @@ class TestFragment : Fragment() {
 
         btnStartTest3?.setOnClickListener {
             navigateToQuestions(3)
+        }
+        btnStartTest4?.setOnClickListener {
+            navigateToQuestions(4)
+        }
+        btnStartTest5?.setOnClickListener {
+            navigateToQuestions(5)
+        }
+        btnStartTest6?.setOnClickListener {
+            navigateToQuestions(6)
+        }
+        btnStartTest7?.setOnClickListener {
+            navigateToQuestions(7)
         }
     }
 
