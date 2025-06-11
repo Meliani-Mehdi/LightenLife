@@ -1,6 +1,7 @@
 package com.app.lightenlife
 
 import ClientStatsAdapter
+import android.content.Intent
 import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
@@ -8,7 +9,9 @@ import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
 import android.widget.EditText
+import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -25,27 +28,30 @@ class HomeFragment : Fragment() {
     private lateinit var adapter: ClientStatsAdapter
     private lateinit var infoEntryManager: InfoEntryManager
     private lateinit var recyclerView: RecyclerView
-    private lateinit var nameHolder: EditText
+    private lateinit var nameHolder: TextView
+    private lateinit var AI_form: Button
     private val handler = Handler(Looper.getMainLooper())
     private val intervalMillis = 30_000L
-    private val statTypes = listOf("Heart rate", "Temperature", "Blood Pressure", "SpO2", "EDA")
+    private val statTypes = listOf("Blood Pressure(Sys)", "Blood Pressure(Dias)", "Temperature", "SpO2", "EDA")
     private var client: Client? = null
 
+    private var data = listOf(0, 0, 0, 0, 0, 0)
+
     private val iconsMap = mapOf(
-        "Heart rate" to R.drawable.heartbeat,
+        "Blood Pressure(Sys)" to R.drawable.heartbeat,
         "SpO2" to R.drawable.o2,
         "Sleep" to R.drawable.sleeping_face_1024_535404208,
         "EDA" to R.drawable.bolt,
-        "Blood Pressure" to R.drawable.blood_pressure,
+        "Blood Pressure(Dias)" to R.drawable.blood_pressure,
         "Temperature" to R.drawable.temperature
     )
 
     private val colorsMap = mapOf(
-        "Heart rate" to R.color.heart,
+        "Blood Pressure(Sys)" to R.color.heart,
         "SpO2" to R.color.light_blue,
-        "Sleep" to R.color.dark_gray,
+        "Sleep" to R.color.light_blue,
         "EDA" to R.color.yellow,
-        "Blood Pressure" to R.color.heart,
+        "Blood Pressure(Dias)" to R.color.heart,
         "Temperature" to R.color.light_blue
     )
 
@@ -66,6 +72,8 @@ class HomeFragment : Fragment() {
     ): View? {
         val view = inflater.inflate(R.layout.fragment_home, container, false)
         recyclerView = view.findViewById(R.id.recyclerView)
+        nameHolder = view.findViewById(R.id.user_name_holder)
+        AI_form = view.findViewById(R.id.btn_ai_eval)
         return view
     }
 
@@ -81,6 +89,7 @@ class HomeFragment : Fragment() {
             if (user is Client) {
                 Log.d("UserFetch", "User is a Client")
                 client = user
+                nameHolder.setText(client?.name)
                 infoEntryManager = InfoEntryManager(authId)
                 setupRecyclerView()
                 handler.post(updateTask)
@@ -89,6 +98,13 @@ class HomeFragment : Fragment() {
                 Log.w("UserFetch", "User is not a Client or is null")
             }
         }
+
+        AI_form.setOnClickListener {
+            val intent = Intent(requireContext(), AIFormActivity::class.java)
+            intent.putExtra("user_data", data.toIntArray())
+            startActivity(intent)
+        }
+
     }
 
     private fun setupRecyclerView() {
@@ -102,12 +118,15 @@ class HomeFragment : Fragment() {
         val stress = Random.nextBoolean()
 
         val entries = mapOf(
-            "Heart rate" to InfoEntry(date, if (stress) Random.nextInt(90, 120) else Random.nextInt(60, 80)),
-            "Blood Pressure" to InfoEntry(date, if (stress) 130 + Random.nextInt(0, 20) else 120),
+            "Sleep" to InfoEntry(date, 8),
+            "EDA" to InfoEntry(date, if (stress) Random.nextInt(10, 15) else Random.nextInt(1, 5)),
+            "Blood Pressure(Sys)" to InfoEntry(date, if (stress) 130 + Random.nextInt(0, 20) else 100 + Random.nextInt(0, 20)),
+            "Blood Pressure(Dias)" to InfoEntry(date, if (stress) Random.nextInt(80, 125) else Random.nextInt(60, 85)),
             "Temperature" to InfoEntry(date, if (stress) Random.nextInt(35, 41) else Random.nextInt(36, 38)),
             "SpO2" to InfoEntry(date, if (stress) Random.nextInt(94, 96) else Random.nextInt(96, 100)),
-            "EDA" to InfoEntry(date, if (stress) Random.nextInt(10, 15) else Random.nextInt(1, 5)),
         )
+
+        data = entries.values.map { it.value }
 
         entries.forEach { (stat, entry) ->
             try {

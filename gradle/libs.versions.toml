@@ -1,6 +1,7 @@
 [versions]
 agp = "8.9.0"
 chipNavigationBar = "1.4.0"
+circleprogress = "1.2.1"
 firebaseBom = "33.10.0"
 kotlin = "1.9.4"
 coreKtx = "1.15.0"
@@ -16,10 +17,14 @@ lifecycleRuntimeKtx = "2.6.1"
 activityCompose = "1.8.0"
 kotlinVersion = "2.0.21"
 composeBom = "2024.09.00"
+tensorflowLite = "2.13.0"
+tensorflowLiteSupport = "0.4.2"
+constraintlayoutVersion = "2.2.1"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
 chip-navigation-bar = { module = "com.github.ismaeldivita:chip-navigation-bar", version.ref = "chipNavigationBar" }
+circleprogress = { module = "com.github.lzyzsd:circleprogress", version.ref = "circleprogress" }
 firebase-analytics = { module = "com.google.firebase:firebase-analytics" }
 firebase-auth = { module = "com.google.firebase:firebase-auth" }
 firebase-bom = { module = "com.google.firebase:firebase-bom", version.ref = "firebaseBom" }
@@ -43,6 +48,9 @@ androidx-ui-tooling-preview = { group = "androidx.compose.ui", name = "ui-toolin
 androidx-ui-test-manifest = { group = "androidx.compose.ui", name = "ui-test-manifest" }
 androidx-ui-test-junit4 = { group = "androidx.compose.ui", name = "ui-test-junit4" }
 androidx-material3 = { group = "androidx.compose.material3", name = "material3" }
+tensorflow-lite = { module = "org.tensorflow:tensorflow-lite", version.ref = "tensorflowLite" }
+tensorflow-lite-support = { module = "org.tensorflow:tensorflow-lite-support", version.ref = "tensorflowLiteSupport" }
+constraintlayout = { group = "androidx.constraintlayout", name = "constraintlayout", version.ref = "constraintlayoutVersion" }
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }

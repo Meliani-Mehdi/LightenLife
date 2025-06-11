@@ -163,7 +163,7 @@
                     <View
                         android:layout_width="8dp"
                         android:layout_height="match_parent"
-                        android:background="#5F9EA0" />
+                        android:background="#FF6B6B" />
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -201,9 +201,9 @@
                                 android:layout_height="wrap_content"
                                 android:drawableStart="@drawable/baseline_access_time_filled_24"
                                 android:drawablePadding="4dp"
-                                android:drawableTint="#5F9EA0"
-                                android:text="25 min"
-                                android:textColor="#5F9EA0"
+                                android:drawableTint="#FF6B6B"
+                                android:text="20 min"
+                                android:textColor="#FF6B6B"
                                 android:textSize="12sp" />
 
                             <TextView
@@ -212,9 +212,9 @@
                                 android:layout_marginStart="16dp"
                                 android:drawableStart="@drawable/baseline_quiz_24"
                                 android:drawablePadding="4dp"
-                                android:drawableTint="#5F9EA0"
+                                android:drawableTint="#FF6B6B"
                                 android:text="15 questions"
-                                android:textColor="#5F9EA0"
+                                android:textColor="#FF6B6B"
                                 android:textSize="12sp" />
 
                             <View
@@ -227,7 +227,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="36dp"
                                 android:background="@drawable/signupbutton"
-                                android:backgroundTint="#5F9EA0"
+                                android:backgroundTint="#FF6B6B"
                                 android:text="Start"
                                 android:textColor="#FFFFFF"
                                 android:textSize="12sp" />
@@ -328,6 +328,7 @@
                     </LinearLayout>
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
+
             <androidx.cardview.widget.CardView
                 android:id="@+id/card_test4"
                 android:layout_width="match_parent"
@@ -348,7 +349,7 @@
                     <View
                         android:layout_width="8dp"
                         android:layout_height="match_parent"
-                        android:background="#5F9EA0" />
+                        android:background="#FFA500" />
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -386,9 +387,9 @@
                                 android:layout_height="wrap_content"
                                 android:drawableStart="@drawable/baseline_access_time_filled_24"
                                 android:drawablePadding="4dp"
-                                android:drawableTint="#5F9EA0"
+                                android:drawableTint="#FFA500"
                                 android:text="25 min"
-                                android:textColor="#5F9EA0"
+                                android:textColor="#FFA500"
                                 android:textSize="12sp" />
 
                             <TextView
@@ -397,9 +398,9 @@
                                 android:layout_marginStart="16dp"
                                 android:drawableStart="@drawable/baseline_quiz_24"
                                 android:drawablePadding="4dp"
-                                android:drawableTint="#5F9EA0"
+                                android:drawableTint="#FFA500"
                                 android:text="15 questions"
-                                android:textColor="#5F9EA0"
+                                android:textColor="#FFA500"
                                 android:textSize="12sp" />
 
                             <View
@@ -412,7 +413,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="36dp"
                                 android:background="@drawable/signupbutton"
-                                android:backgroundTint="#5F9EA0"
+                                android:backgroundTint="#FFA500"
                                 android:text="Start"
                                 android:textColor="#FFFFFF"
                                 android:textSize="12sp" />
@@ -420,6 +421,7 @@
                     </LinearLayout>
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
+
             <androidx.cardview.widget.CardView
                 android:id="@+id/card_test5"
                 android:layout_width="match_parent"
@@ -440,7 +442,7 @@
                     <View
                         android:layout_width="8dp"
                         android:layout_height="match_parent"
-                        android:background="#5F9EA0" />
+                        android:background="#32CD32" />
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -478,9 +480,9 @@
                                 android:layout_height="wrap_content"
                                 android:drawableStart="@drawable/baseline_access_time_filled_24"
                                 android:drawablePadding="4dp"
-                                android:drawableTint="#5F9EA0"
+                                android:drawableTint="#32CD32"
                                 android:text="25 min"
-                                android:textColor="#5F9EA0"
+                                android:textColor="#32CD32"
                                 android:textSize="12sp" />
 
                             <TextView
@@ -489,9 +491,9 @@
                                 android:layout_marginStart="16dp"
                                 android:drawableStart="@drawable/baseline_quiz_24"
                                 android:drawablePadding="4dp"
-                                android:drawableTint="#5F9EA0"
+                                android:drawableTint="#32CD32"
                                 android:text="15 questions"
-                                android:textColor="#5F9EA0"
+                                android:textColor="#32CD32"
                                 android:textSize="12sp" />
 
                             <View
@@ -504,7 +506,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="36dp"
                                 android:background="@drawable/signupbutton"
-                                android:backgroundTint="#5F9EA0"
+                                android:backgroundTint="#32CD32"
                                 android:text="Start"
                                 android:textColor="#FFFFFF"
                                 android:textSize="12sp" />
@@ -512,6 +514,7 @@
                     </LinearLayout>
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
+
             <androidx.cardview.widget.CardView
                 android:id="@+id/card_test6"
                 android:layout_width="match_parent"
@@ -532,7 +535,7 @@
                     <View
                         android:layout_width="8dp"
                         android:layout_height="match_parent"
-                        android:background="#5F9EA0" />
+                        android:background="#9370DB" />
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -570,9 +573,9 @@
                                 android:layout_height="wrap_content"
                                 android:drawableStart="@drawable/baseline_access_time_filled_24"
                                 android:drawablePadding="4dp"
-                                android:drawableTint="#5F9EA0"
+                                android:drawableTint="#9370DB"
                                 android:text="25 min"
-                                android:textColor="#5F9EA0"
+                                android:textColor="#9370DB"
                                 android:textSize="12sp" />
 
                             <TextView
@@ -581,9 +584,9 @@
                                 android:layout_marginStart="16dp"
                                 android:drawableStart="@drawable/baseline_quiz_24"
                                 android:drawablePadding="4dp"
-                                android:drawableTint="#5F9EA0"
+                                android:drawableTint="#9370DB"
                                 android:text="15 questions"
-                                android:textColor="#5F9EA0"
+                                android:textColor="#9370DB"
                                 android:textSize="12sp" />
 
                             <View
@@ -596,7 +599,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="36dp"
                                 android:background="@drawable/signupbutton"
-                                android:backgroundTint="#5F9EA0"
+                                android:backgroundTint="#9370DB"
                                 android:text="Start"
                                 android:textColor="#FFFFFF"
                                 android:textSize="12sp" />
@@ -604,6 +607,7 @@
                     </LinearLayout>
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
+
             <androidx.cardview.widget.CardView
                 android:id="@+id/card_test7"
                 android:layout_width="match_parent"
@@ -624,7 +628,7 @@
                     <View
                         android:layout_width="8dp"
                         android:layout_height="match_parent"
-                        android:background="#5F9EA0" />
+                        android:background="#20B2AA" />
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -662,9 +666,9 @@
                                 android:layout_height="wrap_content"
                                 android:drawableStart="@drawable/baseline_access_time_filled_24"
                                 android:drawablePadding="4dp"
-                                android:drawableTint="#5F9EA0"
+                                android:drawableTint="#20B2AA"
                                 android:text="25 min"
-                                android:textColor="#5F9EA0"
+                                android:textColor="#20B2AA"
                                 android:textSize="12sp" />
 
                             <TextView
@@ -673,9 +677,9 @@
                                 android:layout_marginStart="16dp"
                                 android:drawableStart="@drawable/baseline_quiz_24"
                                 android:drawablePadding="4dp"
-                                android:drawableTint="#5F9EA0"
+                                android:drawableTint="#20B2AA"
                                 android:text="15 questions"
-                                android:textColor="#5F9EA0"
+                                android:textColor="#20B2AA"
                                 android:textSize="12sp" />
 
                             <View
@@ -688,7 +692,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="36dp"
                                 android:background="@drawable/signupbutton"
-                                android:backgroundTint="#5F9EA0"
+                                android:backgroundTint="#20B2AA"
                                 android:text="Start"
                                 android:textColor="#FFFFFF"
                                 android:textSize="12sp" />
@@ -696,7 +700,6 @@
                     </LinearLayout>
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
-
 
         </LinearLayout>
     </ScrollView>

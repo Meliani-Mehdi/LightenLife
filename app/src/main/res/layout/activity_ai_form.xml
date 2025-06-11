@@ -5,6 +5,415 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/beige"
     tools:context=".AIFormActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:id="@+id/ai_form_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="24dp">
+
+            <!-- Header Section -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginBottom="32dp"
+                android:gravity="center">
+
+                <ImageView
+                    android:layout_width="64dp"
+                    android:layout_height="64dp"
+                    android:src="@drawable/ai_logo"
+                    android:layout_marginBottom="16dp"
+                    android:contentDescription="Health Monitor Icon"
+                    app:tint="@color/light_blue"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Health Assessment"
+                    android:textSize="28sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/light_blue"
+                    android:layout_marginBottom="8dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Enter your vital signs for AI analysis"
+                    android:textSize="16sp"
+                    android:textColor="@color/light_blue"
+                    android:gravity="center" />
+
+            </LinearLayout>
+
+            <!-- Vital Signs Card -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="24dp"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="4dp"
+                app:cardBackgroundColor="@android:color/white">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="24dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Vital Signs"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/light_blue"
+                        android:layout_marginBottom="20dp" />
+
+                    <!-- Heart Rate Spinner -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="16dp"
+                        android:background="@drawable/bg_card"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:padding="12dp">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical"
+                            android:gravity="center_horizontal">
+
+                            <ImageView
+                                android:layout_width="48dp"
+                                android:layout_height="48dp"
+                                android:layout_marginBottom="8dp"
+                                android:src="@drawable/heartbeat"
+                                app:tint="@color/heart" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Blood Pressure (Sys)"
+                                android:textColor="@color/light_blue"
+                                android:textSize="16sp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Range: 80-200"
+                                android:textColor="@color/light_blue"
+                                android:textSize="12sp" />
+
+                        </LinearLayout>
+
+                        <Spinner
+                            android:id="@+id/spinner_heart_rate"
+                            android:layout_width="120dp"
+                            android:layout_height="48dp"
+                            android:layout_marginStart="16dp"
+                            android:background="@drawable/spinner_background"
+                            android:padding="8dp"
+                            android:spinnerMode="dropdown" />
+
+                    </LinearLayout>
+
+                    <!-- Blood Pressure Spinner -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="16dp"
+                        android:background="@drawable/bg_card"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:padding="12dp">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical"
+                            android:gravity="center_horizontal">
+
+                            <ImageView
+                                android:layout_width="48dp"
+                                android:layout_height="48dp"
+                                android:layout_marginBottom="8dp"
+                                android:src="@drawable/blood_pressure"
+                                app:tint="@color/heart" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Blood Pressure (Dias)"
+                                android:textColor="@color/light_blue"
+                                android:textSize="16sp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Range: 40-120"
+                                android:textColor="@color/light_blue"
+                                android:textSize="12sp" />
+
+                        </LinearLayout>
+
+                        <Spinner
+                            android:id="@+id/spinner_bp"
+                            android:layout_width="120dp"
+                            android:layout_height="48dp"
+                            android:layout_marginStart="16dp"
+                            android:background="@drawable/spinner_background"
+                            android:padding="8dp"
+                            android:spinnerMode="dropdown" />
+
+                    </LinearLayout>
+
+                    <!-- Temperature Spinner -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="16dp"
+                        android:background="@drawable/bg_card"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:padding="12dp">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical"
+                            android:gravity="center_horizontal">
+
+                            <ImageView
+                                android:layout_width="48dp"
+                                android:layout_height="48dp"
+                                android:layout_marginBottom="8dp"
+                                android:src="@drawable/temperature"
+                                app:tint="@color/light_blue" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Temperature (°C)"
+                                android:textColor="@color/light_blue"
+                                android:textSize="16sp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Range: 35.0-42.0"
+                                android:textColor="@color/light_blue"
+                                android:textSize="12sp" />
+
+                        </LinearLayout>
+
+                        <Spinner
+                            android:id="@+id/spinner_temperature"
+                            android:layout_width="120dp"
+                            android:layout_height="48dp"
+                            android:layout_marginStart="16dp"
+                            android:background="@drawable/spinner_background"
+                            android:padding="8dp"
+                            android:spinnerMode="dropdown" />
+
+                    </LinearLayout>
+
+                    <!-- SpO2 Spinner -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="16dp"
+                        android:background="@drawable/bg_card"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:padding="12dp">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical"
+                            android:gravity="center_horizontal">
+
+                            <ImageView
+                                android:layout_width="48dp"
+                                android:layout_height="48dp"
+                                android:layout_marginBottom="8dp"
+                                android:src="@drawable/o2"
+                                app:tint="@color/light_blue" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="SpO2 (%)"
+                                android:textColor="@color/light_blue"
+                                android:textSize="16sp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Range: 70-100"
+                                android:textColor="@color/light_blue"
+                                android:textSize="12sp" />
+
+                        </LinearLayout>
+
+                        <Spinner
+                            android:id="@+id/spinner_spo2"
+                            android:layout_width="120dp"
+                            android:layout_height="48dp"
+                            android:layout_marginStart="16dp"
+                            android:background="@drawable/spinner_background"
+                            android:padding="8dp"
+                            android:spinnerMode="dropdown" />
+
+                    </LinearLayout>
+
+                    <!-- EDA Spinner -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="16dp"
+                        android:background="@drawable/bg_card"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:padding="12dp">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical"
+                            android:gravity="center_horizontal">
+
+                            <ImageView
+                                android:layout_width="48dp"
+                                android:layout_height="48dp"
+                                android:layout_marginBottom="8dp"
+                                android:src="@drawable/bolt"
+                                app:tint="@color/yellow" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="EDA (μS)"
+                                android:textColor="@color/light_blue"
+                                android:textSize="16sp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Range: 0-50"
+                                android:textColor="@color/light_blue"
+                                android:textSize="12sp" />
+
+                        </LinearLayout>
+
+                        <Spinner
+                            android:id="@+id/spinner_eda"
+                            android:layout_width="120dp"
+                            android:layout_height="48dp"
+                            android:layout_marginStart="16dp"
+                            android:background="@drawable/spinner_background"
+                            android:padding="8dp"
+                            android:spinnerMode="dropdown" />
+
+                    </LinearLayout>
+
+                    <!-- Sleep Spinner -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="16dp"
+                        android:background="@drawable/bg_card"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:padding="12dp">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical"
+                            android:gravity="center_horizontal">
+
+                            <ImageView
+                                android:layout_width="48dp"
+                                android:layout_height="48dp"
+                                android:layout_marginBottom="8dp"
+                                android:src="@drawable/sleeping_face_1024_535404208"
+                                app:tint="@color/light_blue" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Sleep (Hours)"
+                                android:textColor="@color/light_blue"
+                                android:textSize="16sp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Range: 0-14"
+                                android:textColor="@color/light_blue"
+                                android:textSize="12sp" />
+
+                        </LinearLayout>
+
+                        <Spinner
+                            android:id="@+id/spinner_sleep"
+                            android:layout_width="120dp"
+                            android:layout_height="48dp"
+                            android:layout_marginStart="16dp"
+                            android:background="@drawable/spinner_background"
+                            android:padding="8dp"
+                            android:spinnerMode="dropdown" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <!-- Action Button -->
+            <Button
+                android:id="@+id/btn_ai_evaluate"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:layout_marginBottom="16dp"
+                android:background="@drawable/signupbutton"
+                android:backgroundTint="@color/light_blue"
+                android:text="Analyze Health Data"
+                android:textColor="@android:color/white"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <!-- Info Text -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Your data is processed securely and analyzed using advanced AI algorithms to provide health insights."
+                android:textSize="14sp"
+                android:textColor="@color/light_blue"
+                android:gravity="center"
+                android:padding="16dp" />
+
+        </LinearLayout>
+
+    </ScrollView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
